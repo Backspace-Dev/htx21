@@ -1,7 +1,7 @@
 HTC INFOBAR A02 HTX21 Kernel
-=================================================
-    By Backspace Dev-Team: <http://backspace.jp/>
--------------------------------------------------
+===============================================
+By Backspace Dev-Team: http://backspace.jp/
+-----------------------------------------------
 
 * すべての説明は日本語です。 | All directions in Japanese.
 * 結果について無保証・免責です。 | This program contributed by *AS IS*.
