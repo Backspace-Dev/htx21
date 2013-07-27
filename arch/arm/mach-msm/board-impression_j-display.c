@@ -1103,7 +1103,7 @@ static void impression_j_display_on(struct msm_fb_data_type *mfd)
 	PR_DISP_INFO("%s\n", __func__);
 }
 
-#define PWM_MIN                   6
+#define PWM_MIN                   8
 #define PWM_DEFAULT               64
 #define PWM_MAX                   255
 
