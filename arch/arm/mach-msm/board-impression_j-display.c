@@ -1104,11 +1104,11 @@ static void impression_j_display_on(struct msm_fb_data_type *mfd)
 }
 
 #define PWM_MIN                   6
-#define PWM_DEFAULT               80
+#define PWM_DEFAULT               64
 #define PWM_MAX                   255
 
-#define BRI_SETTING_MIN                 30
-#define BRI_SETTING_DEF                 143
+#define BRI_SETTING_MIN                 8
+#define BRI_SETTING_DEF                 128
 #define BRI_SETTING_MAX                 255
 
 static unsigned char impression_j_shrink_pwm(int val)
@@ -1262,7 +1262,7 @@ static int __init mipi_cmd_sharp_init(void)
 	pinfo.bpp = 24;
         pinfo.width = 58;
         pinfo.height = 103;
-	pinfo.camera_backlight = 183;
+	pinfo.camera_backlight = 1;
 
 	pinfo.lcdc.h_back_porch = 116;
 	pinfo.lcdc.h_front_porch = 184;
@@ -1307,7 +1307,7 @@ static int __init mipi_cmd_sharp_init(void)
 	pinfo.mipi.wr_mem_continue = 0x3c;
 	pinfo.mipi.wr_mem_start = 0x2c;
 
-	pinfo.mipi.frame_rate = 58;
+	pinfo.mipi.frame_rate = 50;
 	pinfo.mipi.dsi_phy_db = &phy_ctrl_720p_id311100;
 
 	ret = mipi_impression_j_device_register(&pinfo, MIPI_DSI_PRIM,
@@ -1348,7 +1348,7 @@ static int __init mipi_video_sharp_nt_720p_pt_init(void)
 	pinfo.bpp = 24;
 	pinfo.width = 58;
 	pinfo.height = 103;
-	pinfo.camera_backlight = 183;
+	pinfo.camera_backlight = 1;
 
 	pinfo.lcdc.h_back_porch = 125;
 	pinfo.lcdc.h_front_porch = 122;
@@ -1381,7 +1381,7 @@ static int __init mipi_video_sharp_nt_720p_pt_init(void)
 	pinfo.mipi.stream = 0; 
 
 	pinfo.mipi.dma_trigger = DSI_CMD_TRIGGER_SW;
-	pinfo.mipi.frame_rate = 57;
+	pinfo.mipi.frame_rate = 50;
 	pinfo.mipi.dsi_phy_db = &mipi_dsi_sharp_panel_idA1B100_phy_ctrl_720p;
 
 	ret = mipi_impression_j_device_register(&pinfo, MIPI_DSI_PRIM, MIPI_DSI_PANEL_WVGA_PT);
